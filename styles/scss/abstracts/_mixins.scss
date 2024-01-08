@@ -1,0 +1,11 @@
+@mixin flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin border {
+  border-top: 2px solid rgb(234, 220, 23);
+  border-right: 2px solid rgb(234, 220, 23);
+  border-left: 2px solid rgb(100, 224, 158);
+  border-bottom: 2px solid rgb(100, 224, 158);
+}
