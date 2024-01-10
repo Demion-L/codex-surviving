@@ -376,9 +376,28 @@ svg {
 }
 
 .main {
-  padding: 2rem 7rem 4rem 11rem;
+  padding: 8rem 7rem 4rem 11rem;
+}
+.main-content {
+  padding: 1rem;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  color: rgb(231, 222, 65);
+  letter-spacing: 0.05rem;
+  font-size: 1.3rem;
 }
 
+.header {
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  left: 0;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .header-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -386,7 +405,7 @@ svg {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem;
   background: rgb(249, 231, 38);
   background: -o-linear-gradient(324deg, rgb(249, 231, 38) 0%, rgb(196, 232, 134) 58%, rgb(3, 123, 148) 100%);
   background: linear-gradient(126deg, rgb(249, 231, 38) 0%, rgb(196, 232, 134) 58%, rgb(3, 123, 148) 100%);
@@ -407,23 +426,35 @@ svg {
   text-shadow: 1px 1px 5px rgb(202, 51, 51);
 }
 .navigation {
-  height: 80%;
+  position: fixed;
+  top: 6.25rem;
+  bottom: 0;
   width: 100%;
   max-width: 10rem;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(11, 46, 56, 0.75);
+  border-right: 1px solid rgba(206, 190, 190, 0.125);
+  font-family: sans-serif;
+  color: rgb(175, 197, 77);
 }
-
+.navigation li {
+  padding: 0.5rem 0.2rem;
+}
 body {
   height: 100vh;
   width: 100%;
 }
 
+.wrapper {
+  background: url("/assets/bg/bg-main.png") no-repeat fixed;
+  background-size: cover;
+}
+
 .container {
-  border-top: 2px solid rgb(234, 220, 23);
-  border-right: 2px solid rgb(234, 220, 23);
-  border-left: 2px solid rgb(100, 224, 158);
-  border-bottom: 2px solid rgb(100, 224, 158);
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .general {
@@ -431,12 +462,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-}
-
-aside {
-  border: 1px solid #000;
-  height: 100vh;
-  position: fixed;
 }
 
 main {

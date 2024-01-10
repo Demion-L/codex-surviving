@@ -1,3 +1,15 @@
 .main {
-  padding: 2rem 7rem 4rem 11rem;
+  padding: 8rem 7rem 4rem 11rem;
+
+  &-content {
+    padding: 1rem;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    color: rgb(231, 222, 65);
+    letter-spacing: 0.05rem;
+    font-size: 1.3rem;
+  }
 }
