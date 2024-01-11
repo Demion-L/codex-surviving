@@ -11,10 +11,14 @@
   font-family: sans-serif;
   color: rgb(175, 197, 77);
 
-  li {
-    padding: 0.5rem 0.2rem;
+  ul {
+    @include flex-column;
 
-    &:first-child {
-    }
+    margin-top: 0.3rem;
+  }
+
+  li {
+    padding: 0.5rem 0.5rem;
+    line-height: 1.3rem;
   }
 }

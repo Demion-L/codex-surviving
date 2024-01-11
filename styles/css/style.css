@@ -375,6 +375,47 @@ svg {
   margin-top: auto;
 }
 
+.shadow-radial {
+  display: inline-block;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.shadow-radial:before, .shadow-radial:after {
+  pointer-events: none;
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-repeat: no-repeat;
+  height: 5px;
+  opacity: 0;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.shadow-radial:before {
+  bottom: 100%;
+  background: -o-radial-gradient(50% 150%, ellipse, rgba(232, 252, 7, 0.6) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(ellipse at 50% 150%, rgba(232, 252, 7, 0.6) 0%, rgba(0, 0, 0, 0) 80%);
+}
+.shadow-radial:after {
+  top: 100%;
+  background: -o-radial-gradient(50% -50%, ellipse, rgba(232, 252, 7, 0.6) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(ellipse at 50% -50%, rgba(232, 252, 7, 0.6) 0%, rgba(0, 0, 0, 0) 80%);
+}
+.shadow-radial:hover:before, .shadow-radial:hover:after {
+  opacity: 1;
+}
+
 .main {
   padding: 8rem 7rem 4rem 11rem;
 }
@@ -438,16 +479,28 @@ svg {
   font-family: sans-serif;
   color: rgb(175, 197, 77);
 }
-.navigation li {
-  padding: 0.5rem 0.2rem;
+.navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 0.3rem;
 }
+.navigation li {
+  padding: 0.5rem 0.5rem;
+  line-height: 1.3rem;
+}
+
 body {
   height: 100vh;
   width: 100%;
 }
 
 .wrapper {
-  background: url("/assets/bg/bg-main.png") no-repeat fixed;
+  background: url("assets/bg/bg-main.png") no-repeat fixed;
   background-size: cover;
 }
 
